@@ -30,15 +30,13 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-[#2c2017]/90 backdrop-blur-md border-b border-[#4e3d30]/60 px-6 py-4 text-[#f2e6d9] select-none">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-        {/* Brand/Logo */}
         <Link href={token ? "/sheets" : "/"} className="flex items-center gap-2.5 group">
           <span className="h-2.5 w-2.5 rounded-full bg-[#00c897] animate-pulse" />
           <span className="font-mono text-xs tracking-widest uppercase font-bold text-[#e6d5c3] group-hover:text-amber-300 transition-colors">
-            DSA Journey
+            DSA Sheet Tracker
           </span>
         </Link>
 
-        {/* Action Links */}
         <div className="flex items-center gap-6">
           {token ? (
             <>

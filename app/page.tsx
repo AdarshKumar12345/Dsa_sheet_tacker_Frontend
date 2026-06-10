@@ -18,29 +18,24 @@ export default function Home() {
       <Navbar />
 
       <main className="flex-1 flex flex-col items-center justify-center px-6 py-20 relative overflow-hidden">
-        {/* Decorative ambient blur */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-[#4e3d30]/20 blur-3xl pointer-events-none" />
 
         <div className="max-w-3xl w-full text-center space-y-8 relative z-10">
           
-          {/* Status Badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#3d2f25] border border-[#4e3d30] text-amber-300 font-mono text-[11px] uppercase tracking-widest mx-auto">
             <span className="h-1.5 w-1.5 rounded-full bg-[#00c897] animate-pulse" />
             DSA SCHEMA INDEXING TERMINAL
           </div>
 
-          {/* Staggered Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight leading-none text-[#e6d5c3]">
             Track Your <span className="italic font-serif text-amber-300 font-normal">DSA Progress</span> <br />
             With Semantic Precision.
           </h1>
 
-          {/* Supportive Subtext */}
           <p className="max-w-lg mx-auto text-sm sm:text-base text-[#b8a28f] font-mono leading-relaxed">
             Upload document schemes, extract tabular questions utilizing AI pipelines, discover matching problem links on LeetCode, GeeksforGeeks, or Codeforces, and track your completions.
           </p>
 
-          {/* Staggered CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             {token ? (
               <Link
@@ -73,7 +68,6 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Subtle Footer */}
       <footer className="py-8 border-t border-[#4e3d30]/60 text-center text-[10px] font-mono text-[#8b7361] select-none">
         &copy; {new Date().getFullYear()} Console Infrastructure. Built with Next.js & Mongoose Atlas.
       </footer>

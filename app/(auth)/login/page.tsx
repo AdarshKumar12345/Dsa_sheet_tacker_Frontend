@@ -1,4 +1,3 @@
-// app/login/page.tsx
 "use client";
 
 import { useState } from "react";
@@ -49,12 +48,9 @@ export default function LoginPage() {
     return (
         <div className="min-h-screen bg-[#2c2017] flex flex-col md:flex-row antialiased select-none">
 
-            {/* Editorial/Bespoke Left Column */}
             <div className="md:w-5/12 bg-[#3d2f25] border-b md:border-b-0 md:border-r border-[#4e3d30] p-8 sm:p-12 md:p-16 flex flex-col justify-between text-[#f2e6d9] relative overflow-hidden shrink-0">
-                {/* Subtle abstract background element to break uniformity */}
                 <div className="absolute -top-12 -left-12 w-48 h-48 rounded-full bg-[#4e3d30]/20 blur-2xl pointer-events-none" />
 
-                {/* Top Branding Marker */}
                 <div className="flex items-center gap-3 relative z-10">
                     <span className="h-2 w-2 rounded-full bg-[#00c897]" />
                     <p className="font-mono text-xs tracking-widest text-[#cbb6a3] uppercase">
@@ -62,7 +58,6 @@ export default function LoginPage() {
                     </p>
                 </div>
 
-                {/* Central Layout Text (Staggered/Editorial) */}
                 <div className="my-16 md:my-0 space-y-4 relative z-10">
                     <h2 className="text-4xl lg:text-5xl font-light tracking-tight leading-none text-[#e6d5c3]">
                         Sheet <br />
@@ -74,13 +69,11 @@ export default function LoginPage() {
                     </p>
                 </div>
 
-                {/* Bottom Status Marker */}
                 <p className="text-[10px] font-mono text-[#8b7361] hidden md:block">
                     &copy; {new Date().getFullYear()} Console Infrastructure. All rights reserved.
                 </p>
             </div>
 
-            {/* Clean Minimalist Right Side Form Column */}
             <div className="flex-1 bg-[#261b13] flex items-center justify-center p-8 sm:p-12 md:p-16">
                 <div className="w-full max-w-sm space-y-8">
 
@@ -93,18 +86,15 @@ export default function LoginPage() {
                         </p>
                     </div>
 
-                    {/* Clean Error Message Indicator */}
                     {error && (
                         <div className="text-xs font-mono font-semibold text-[#da7d7d] border-l-2 border-[#da7d7d] pl-3 py-1 bg-[#3d1a1a]/40 rounded-r-md">
                             {error}
                         </div>
                     )}
 
-                    {/* Form Structure */}
                     <form onSubmit={handleLogin} className="space-y-6">
                         <div className="space-y-4">
 
-                            {/* Username Field Block */}
                             <div className="space-y-1">
                                 <label htmlFor="username" className="text-[11px] font-mono tracking-wider text-[#b8a28f] uppercase">
                                     Ident. Signature
@@ -121,7 +111,6 @@ export default function LoginPage() {
                                 />
                             </div>
 
-                            {/* Password Field Block */}
                             <div className="space-y-1">
                                 <div className="flex items-center justify-between">
                                     <label htmlFor="password" className="text-[11px] font-mono tracking-wider text-[#b8a28f] uppercase">
@@ -141,7 +130,6 @@ export default function LoginPage() {
 
                         </div>
 
-                        {/* Custom Interactive Action Button */}
                         <button
                             type="submit"
                             disabled={loading}

@@ -1,4 +1,3 @@
-// app/upload-sheet/page.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -40,7 +39,6 @@ export default function UploadSheet() {
 
       const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
 
-      // Sends Multipart data supporting PDF or Binary Excel tables with token
       const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5002";
       const res = await axios.post(
         `${API_URL}/api/sheet/upload`,
@@ -104,14 +102,12 @@ export default function UploadSheet() {
       <div className="flex-1 py-12 px-4 sm:px-6 lg:px-10">
         <div className="max-w-7xl mx-auto flex flex-col items-center">
 
-          {/* Banner Title Header */}
           <div className="text-center mb-10">
             <h1 className="text-4xl font-extrabold tracking-tight">
               Upload Sheet Dashboard
             </h1>
           </div>
 
-          {/* Side-by-Side Panels Grid Layout */}
           <div className="w-full grid grid-cols-1 md:grid-cols-[3fr,5fr] gap-10 items-start">
             <FileParserPanel
               setFile={setFile}
@@ -126,10 +122,8 @@ export default function UploadSheet() {
             />
           </div>
 
-          {/* Footer Configuration Field & Create Button */}
           <div className="w-full mt-10 space-y-6 flex flex-col items-center">
 
-            {/* Sheet Name Input */}
             <div className="w-full max-w-xl text-center space-y-2">
               <div className="flex gap-4 items-center justify-center">
                 <label htmlFor="sheetName" className="font-medium text-lg text-[#cbb6a3]">
@@ -146,7 +140,6 @@ export default function UploadSheet() {
               </div>
             </div>
 
-            {/* Glowing Submit Trigger Button */}
             <button
               onClick={handleSheetCreate}
               className="group bg-[#00c897] hover:bg-[#00e0a8] text-[#1a3321] font-bold text-lg px-8 py-3.5 rounded-xl transition-all shadow-[0_0_15px_#00c897] flex items-center gap-2.5 active:scale-95 cursor-pointer"

@@ -29,7 +29,6 @@ export default function SheetsPage() {
             );
 
             const sheetsData = res.data.sheets || [];
-            // Map securely, normalizing alternative object keys if necessary
             setSheets(
                 sheetsData.map((sheet: any) => ({
                     id: sheet.id || sheet._id,
@@ -87,7 +86,6 @@ export default function SheetsPage() {
             <div className="flex-1 py-16 px-4 sm:px-8 lg:px-12">
                 <div className="max-w-5xl mx-auto space-y-10">
 
-                    {/* Editorial Top Section Header */}
                     <div className="flex flex-col md:flex-row md:items-center justify-between border-b border-[#4e3d30] pb-6 gap-4">
                         <div className="space-y-1">
                             <div className="flex items-center gap-2 text-amber-300 font-mono text-xs tracking-widest uppercase">
@@ -111,7 +109,6 @@ export default function SheetsPage() {
                         </div>
                     </div>
 
-                {/* Dynamic Display Matrix Grid */}
                 {sheets && sheets.length > 0 ? (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {sheets.map((sheet) => (
@@ -121,7 +118,6 @@ export default function SheetsPage() {
                                 className="group bg-[#3d2f25] border border-[#4e3d30] hover:border-amber-300/40 rounded-xl p-6 flex flex-col justify-between cursor-pointer transition-all duration-200 shadow-lg hover:-translate-y-0.5"
                             >
                                 <div className="space-y-4">
-                                    {/* Structural Header Tagging Inside Card */}
                                     <div className="flex items-center justify-between">
                                         <div className="p-2 bg-[#2c2017] rounded-lg border border-[#4e3d30] text-[#cbb6a3] group-hover:text-amber-300 transition-colors">
                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -147,13 +143,11 @@ export default function SheetsPage() {
                                         </div>
                                     </div>
 
-                                    {/* Core Content String Title */}
                                     <h3 className="text-xl font-bold tracking-tight text-[#f2e6d9] group-hover:text-amber-200 transition-colors line-clamp-2 pt-2">
                                         {sheet.title}
                                     </h3>
                                 </div>
 
-                                {/* Bottom Interactive Row Block */}
                                 <div className="mt-8 pt-4 border-t border-[#4e3d30] flex items-center justify-between text-xs font-mono font-medium text-[#b8a28f] group-hover:text-[#f2e6d9] transition-colors">
                                     <span>Open Collection</span>
                                     <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform text-[#8b7361] group-hover:text-amber-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -164,7 +158,6 @@ export default function SheetsPage() {
                         ))}
                     </div>
                 ) : (
-                    /* Custom State Block for Clean Empty State Realization */
                     <div className="border border-dashed border-[#4e3d30] bg-[#3d2f25]/30 rounded-2xl p-16 text-center max-w-xl mx-auto mt-12 space-y-6 flex flex-col items-center">
                         <svg className="w-12 h-12 text-[#8b7361] mx-auto" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -184,7 +177,7 @@ export default function SheetsPage() {
                     </div>
                 )}
 
-            </div>
+                </div>
             </div>
         </div>
     );

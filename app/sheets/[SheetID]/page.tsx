@@ -1,4 +1,3 @@
-// app/sheets/[SheetID]/page.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -22,7 +21,6 @@ const CodeforcesIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
         <path d="M4.5 7.5C5.328 7.5 6 8.172 6 9v10.5c0 .828-.672 1.5-1.5 1.5h-3C.673 21 0 20.328 0 19.5V9c0-.828.673-1.5 1.5-1.5h3zm9-4.5c.828 0 1.5.672 1.5 1.5v15c0 .828-.672 1.5-1.5 1.5h-3c-.827 0-1.5-.672-1.5-1.5v-15c0-.828.673-1.5 1.5-1.5h3zm9 7.5c.828 0 1.5.672 1.5 1.5v7.5c0 .828-.672 1.5-1.5 1.5h-3c-.828 0-1.5-.672-1.5-1.5V12c0-.828.672-1.5 1.5-1.5h3z"/>
     </svg>
 );
-
 
 interface Question {
     _id: string;
@@ -129,7 +127,6 @@ export default function SheetPage() {
             <div className="flex-1 py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto space-y-8">
 
-                {/* Breadcrumb / Top Meta Metadata Header Banner */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#5a4639] pb-6 gap-4">
                     <div>
                         <span className="text-xs font-bold uppercase tracking-widest text-[#cbb6a3]">
@@ -149,7 +146,6 @@ export default function SheetPage() {
                     </div>
                 </div>
 
-                {/* Dashboard Grid System */}
                 <div className="space-y-4">
                     <div className="flex items-center justify-between">
                         <h2 className="text-xl font-bold tracking-tight text-[#cbb6a3] flex items-center gap-2">
@@ -171,7 +167,6 @@ export default function SheetPage() {
                                             : 'bg-[#4d3a2d] border-[#5a4639] hover:border-amber-400/40 hover:shadow-lg'
                                             }`}
                                     >
-                                        {/* Left: Checkbox, Number, Title, Badges */}
                                         <div className="flex items-start md:items-center gap-4 flex-1">
                                             <button
                                                 onClick={() => handleToggleComplete(question._id)}
@@ -205,9 +200,7 @@ export default function SheetPage() {
                                             </div>
                                         </div>
 
-                                        {/* Right: Platform Links */}
                                         <div className="flex flex-wrap items-center gap-3 shrink-0">
-                                            {/* LeetCode */}
                                             {question.urlleetcode ? (
                                                 <a
                                                     href={question.urlleetcode}
@@ -223,7 +216,6 @@ export default function SheetPage() {
                                                 </span>
                                             )}
 
-                                            {/* GeeksforGeeks */}
                                             {question.urlgfg ? (
                                                 <a
                                                     href={question.urlgfg}
@@ -239,7 +231,6 @@ export default function SheetPage() {
                                                 </span>
                                             )}
 
-                                            {/* Codeforces */}
                                             {question.urlcodeforces ? (
                                                 <a
                                                     href={question.urlcodeforces}
@@ -272,7 +263,7 @@ export default function SheetPage() {
                     )}
                 </div>
 
-            </div>
+                </div>
             </div>
         </div>
     );
