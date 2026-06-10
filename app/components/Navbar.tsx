@@ -42,24 +42,22 @@ export default function Navbar() {
             <>
               <Link
                 href="/sheets"
-                className={`text-xs font-mono uppercase tracking-wider transition-colors hover:text-amber-300 ${
-                  pathname === "/sheets" ? "text-amber-300 font-bold" : "text-[#cbb6a3]"
-                }`}
+                className={`text-xs font-mono uppercase tracking-wider transition-colors hover:text-amber-300 ${pathname === "/sheets" ? "text-amber-300 font-bold" : "text-[#cbb6a3]"
+                  }`}
               >
                 Sheets
               </Link>
               <Link
                 href="/upload-sheet"
-                className={`text-xs font-mono uppercase tracking-wider transition-colors hover:text-amber-300 ${
-                  pathname === "/upload-sheet" ? "text-amber-300 font-bold" : "text-[#cbb6a3]"
-                }`}
+                className={`text-xs font-mono uppercase tracking-wider transition-colors hover:text-amber-300 ${pathname === "/upload-sheet" ? "text-amber-300 font-bold" : "text-[#cbb6a3]"
+                  }`}
               >
                 Upload
               </Link>
               <div className="h-4 w-px bg-[#4e3d30]" />
               {username && (
                 <span className="text-[11px] font-mono text-[#b8a28f] hidden md:inline-block">
-                  Operator: <span className="text-amber-300 font-bold">{username}</span>
+                  User: <span className="text-amber-300 font-bold">{username}</span>
                 </span>
               )}
               <button
@@ -73,9 +71,8 @@ export default function Navbar() {
             <>
               <Link
                 href="/login"
-                className={`text-xs font-mono uppercase tracking-wider transition-colors hover:text-amber-300 ${
-                  pathname === "/login" ? "text-amber-300 font-bold" : "text-[#cbb6a3]"
-                }`}
+                className={`text-xs font-mono uppercase tracking-wider transition-colors hover:text-amber-300 ${pathname === "/login" ? "text-amber-300 font-bold" : "text-[#cbb6a3]"
+                  }`}
               >
                 Sign In
               </Link>

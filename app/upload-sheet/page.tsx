@@ -54,8 +54,12 @@ export default function UploadSheet() {
       setQuestions(res.data.questions || []);
       setMetaData(res.data.metaData || {});
       setUploaded(true);
-    } catch (err) {
+    } catch (err: any) {
       console.error("Error parsing file structure:", err);
+      if (err.response?.status === 401) {
+        router.push("/login");
+        return;
+      }
       alert("Failed to parse document or sheet layout.");
     } finally {
       setUploading(false);
@@ -86,8 +90,12 @@ export default function UploadSheet() {
 
       const sheetId = res.data.sheetId;
       router.push(`/sheets/${sheetId}`);
-    } catch (err) {
+    } catch (err: any) {
       console.error("Error saving layout sheet details:", err);
+      if (err.response?.status === 401) {
+        router.push("/login");
+        return;
+      }
       alert("Failed to save and process database records.");
     }
   };

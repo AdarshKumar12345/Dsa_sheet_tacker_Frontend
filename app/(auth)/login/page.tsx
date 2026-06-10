@@ -54,23 +54,23 @@ export default function LoginPage() {
                 <div className="flex items-center gap-3 relative z-10">
                     <span className="h-2 w-2 rounded-full bg-[#00c897]" />
                     <p className="font-mono text-xs tracking-widest text-[#cbb6a3] uppercase">
-                        Data Terminal Matrix
+                        Login Page
                     </p>
                 </div>
 
                 <div className="my-16 md:my-0 space-y-4 relative z-10">
                     <h2 className="text-4xl lg:text-5xl font-light tracking-tight leading-none text-[#e6d5c3]">
-                        Sheet <br />
-                        <span className="italic font-serif font-normal text-amber-300">Management</span> <br />
-                        System.
+                        DSA <br />
+                        <span className="italic font-serif font-normal text-amber-300">Sheet</span> <br />
+                        Tracker.
                     </h2>
                     <p className="text-xs text-[#b8a28f] font-mono leading-relaxed max-w-xs">
-                        A secured architectural pipeline built to parse, structure, and dispatch data tables seamlessly.
+                        DSA Sheet Tracker is a platform to track your progress in DSA and prepare for interviews.
                     </p>
                 </div>
 
                 <p className="text-[10px] font-mono text-[#8b7361] hidden md:block">
-                    &copy; {new Date().getFullYear()} Console Infrastructure. All rights reserved.
+                    &copy; {new Date().getFullYear()} DSA Sheet Tracker. All rights reserved.
                 </p>
             </div>
 
@@ -79,10 +79,10 @@ export default function LoginPage() {
 
                     <div className="space-y-2">
                         <h3 className="text-2xl font-bold tracking-tight text-[#f2e6d9]">
-                            Authenticate Workspace
+                            Login
                         </h3>
                         <p className="text-sm text-[#9c8472]">
-                            Provide valid operational credentials below.
+                            Provide valid Email and Password
                         </p>
                     </div>
 
@@ -97,7 +97,7 @@ export default function LoginPage() {
 
                             <div className="space-y-1">
                                 <label htmlFor="username" className="text-[11px] font-mono tracking-wider text-[#b8a28f] uppercase">
-                                    Ident. Signature
+                                    Email Address
                                 </label>
                                 <input
                                     id="username"
@@ -106,7 +106,7 @@ export default function LoginPage() {
                                     disabled={loading}
                                     value={username}
                                     onChange={(e) => setUsername(e.target.value)}
-                                    placeholder="Username"
+                                    placeholder="operator@domain.com"
                                     className="w-full bg-[#33251a] border border-[#4a3729] rounded-lg px-4 py-3 text-sm text-[#f2e6d9] placeholder-[#6e5441] focus:outline-none focus:border-amber-300/60 transition-colors duration-150"
                                 />
                             </div>
@@ -114,7 +114,7 @@ export default function LoginPage() {
                             <div className="space-y-1">
                                 <div className="flex items-center justify-between">
                                     <label htmlFor="password" className="text-[11px] font-mono tracking-wider text-[#b8a28f] uppercase">
-                                        Passkey Code
+                                        Password
                                     </label>
                                 </div>
                                 <input
@@ -141,7 +141,7 @@ export default function LoginPage() {
                                     <span className="font-mono text-xs">Decrypting access...</span>
                                 </>
                             ) : (
-                                <span>Initialize Session</span>
+                                <span>Login</span>
                             )}
                         </button>
                     </form>
